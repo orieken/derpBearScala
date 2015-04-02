@@ -1,7 +1,6 @@
 package com.derpbear
 
-import org.scalatest.matchers.{Matcher, MatchResult}
-import org.scalatest.{BeforeAndAfterAll, BeforeAndAfter, Matchers, FunSpec}
+import org.scalatest.{BeforeAndAfterAll, Matchers, FunSpec}
 import scalaj.http._
 import net.liftweb.json._
 
