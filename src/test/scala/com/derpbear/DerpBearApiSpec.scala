@@ -4,21 +4,6 @@ import org.scalatest.matchers.{Matcher, MatchResult}
 import org.scalatest.{BeforeAndAfterAll, BeforeAndAfter, Matchers, FunSpec}
 import scalaj.http._
 import net.liftweb.json._
-//import net.liftweb.json.JsonParser._
-
-
-/**
- * Created by oscar on 4/1/15.
- */
-class User(id:Int,
-           first_name:String,
-           last_name:String,
-           email:String,
-           website:String,
-           pet:String,
-           created_at: java.util.Date,
-            updated_at: java.util.Date)
-
 
 
 class DerpBearApiSpec extends FunSpec with Matchers with BeforeAndAfterAll {
@@ -46,24 +31,25 @@ class DerpBearApiSpec extends FunSpec with Matchers with BeforeAndAfterAll {
 
       }
     }
+
   }
 
-
-  private def haveProperty(expected: String) = new Matcher[JValue] {
-    def apply(left: JValue): MatchResult = {
-      MatchResult(left.hasProperty(expected), "false", "true" )
-    }
-  }
-//    haveProperty(expected) compose { (o:JObject) => o.hasProperty(expected) }
-
-
-  implicit class JValueExtended(value: JValue) {
-    def hasProperty(childString: String): Boolean = {
-      if ((value \ childString) != JNothing) {
-        true
-      } else {
-        false
-      }
-    }
-  }
+// playing around with custom matchers
+//  private def haveProperty(expected: String) = new Matcher[JValue] {
+//    def apply(left: JValue): MatchResult = {
+//      MatchResult(left.hasProperty(expected), "false", "true" )
+//    }
+//  }
+////    haveProperty(expected) compose { (o:JObject) => o.hasProperty(expected) }
+//
+//
+//  implicit class JValueExtended(value: JValue) {
+//    def hasProperty(childString: String): Boolean = {
+//      if ((value \ childString) != JNothing) {
+//        true
+//      } else {
+//        false
+//      }
+//    }
+//  }
 }
