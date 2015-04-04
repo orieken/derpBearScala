@@ -17,3 +17,30 @@ derpBear Examples in scala
 * [ScalaMock](http://scalamock.org/)
 
 
+# Testing
+
+### Running
+
+in the terminal:
+
+```
+sbt test
+```
+
+### Continuous Testing
+
+in the terminal start sbt:
+
+```
+sbt
+```
+
+Then to auto run tests on file saves:
+
+```
+~ test
+```
+
+you can prefix any command in SBT with '~' to make it run continuously
+
+
